@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#faf8f2" />
+    <title>Projetos — FreeBeats Produção Cultural</title>
+    <meta
+      name="description"
+      content="Explore os projetos da FreeBeats. Pesquise e filtre festivais, artes cénicas, criação, música ao vivo e programação cultural."
+    />
+    <meta property="og:title" content="Projetos — FreeBeats Produção Cultural" />
+    <meta
+      property="og:description"
+      content="Explore os projetos da FreeBeats. Pesquise e filtre festivais, artes cénicas, criação, música ao vivo e programação cultural."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_PT" />
+    <meta property="og:site_name" content="FreeBeats" />
+    <link rel="icon" href="assets/images/freebeats-logo-transparente.png" type="image/png" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <script src="js/conteudo.js" defer></script>
+    <script src="js/comum.js" defer></script>
+    <script src="js/projetos.js" defer></script>
+  </head>
+  <body id="topo">
+    <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
+    <header class="site-header" data-menu-open="false">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="FreeBeats — página inicial"
+          ><img
+            class="brand-image"
+            src="assets/images/freebeats-logo-transparente.png"
+            alt="FreeBeats — Produção Cultural"
+            width="1536"
+            height="1024"
+            decoding="async"
+        /></a>
+        <nav class="main-nav" id="menu-principal" aria-label="Menu principal">
+          <a href="index.html#inicio">Início</a><a href="index.html#sobre">Sobre</a
+          ><a href="index.html#servicos">Serviços</a
+          ><a href="projetos.html" aria-current="page">Projetos</a><a href="index.html#blog">Blog</a
+          ><a href="index.html#contactos">Contactos</a>
+        </nav>
+        <a class="button button-small header-cta" href="index.html#contactos"
+          >Vamos conversar <span data-icone="diagonal"></span
+        ></a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-controls="menu-principal"
+          aria-expanded="false"
+          aria-label="Abrir menu"
+        >
+          <span class="menu-icon" data-icone="menu"></span
+          ><span class="close-icon" data-icone="fechar"></span>
+        </button>
+      </div>
+    </header>
+    <noscript
+      ><p class="no-script">
+        Ative o JavaScript para consultar os projetos e usar as funcionalidades do site. Pode
+        contactar-nos diretamente por email ou telefone no rodapé.
+      </p></noscript
+    >
+    <main id="conteudo">
+      <section class="portfolio-hero">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Percurso">
+            <a href="index.html">Início</a><span data-icone="seguinte"></span
+            ><span aria-current="page">Projetos</span>
+          </nav>
+          <p class="eyebrow accent">Portefólio</p>
+          <h1 class="page-title">Todos os <span class="editorial accent">projetos.</span></h1>
+          <p class="section-intro">
+            Festivais, artes cénicas, residências artísticas, concertos e programação cultural.
+            Diferentes formatos, a mesma dedicação.
+          </p>
+        </div>
+      </section>
+      <section class="portfolio-results" aria-label="Explorar projetos">
+        <div class="container">
+          <div class="portfolio-tools">
+            <div class="search-row">
+              <div class="search-box">
+                <span data-icone="pesquisa"></span
+                ><label class="visually-hidden" for="pesquisa-projetos"
+                  >Pesquisar projetos por nome, local ou serviço</label
+                ><input
+                  id="pesquisa-projetos"
+                  type="search"
+                  placeholder="Pesquisar por nome, local, serviço…"
+                  autocomplete="off"
+                /><button type="button" id="limpar-pesquisa" aria-label="Limpar pesquisa" hidden>
+                  <span data-icone="fechar"></span>
+                </button>
+              </div>
+              <div class="sort-tools">
+                <label class="visually-hidden" for="ordenar-projetos">Ordenar projetos</label
+                ><select id="ordenar-projetos">
+                  <option value="recentes">Mais recentes</option>
+                  <option value="populares">Popularidade</option>
+                </select>
+                <div class="view-buttons" role="group" aria-label="Modo de apresentação">
+                  <button
+                    type="button"
+                    data-vista="grelha"
+                    aria-label="Ver em grelha"
+                    aria-pressed="true"
+                  >
+                    <span data-icone="grelha"></span></button
+                  ><button
+                    type="button"
+                    data-vista="lista"
+                    aria-label="Ver em lista"
+                    aria-pressed="false"
+                  >
+                    <span data-icone="lista"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="filter-buttons"
+              id="categorias"
+              role="group"
+              aria-label="Filtrar por categoria"
+            ></div>
+          </div>
+          <div class="results-toolbar">
+            <span id="numero-resultados" role="status" aria-live="polite"></span>
+            <div class="active-filters" id="filtros-ativos"></div>
+            <button class="filter-chip" id="limpar-filtros" data-limpar type="button" hidden>
+              Limpar filtros <span data-icone="fechar"></span>
+            </button>
+          </div>
+          <div class="project-grid" id="lista-projetos"></div>
+          <div class="empty-state" id="sem-resultados" hidden>
+            <h2>Nenhum projeto por aqui.</h2>
+            <p>Experimente outra palavra ou uma categoria diferente.</p>
+            <button class="button button-outline" data-limpar type="button">
+              Limpar pesquisa e filtros
+            </button>
+          </div>
+          <button class="button button-outline load-more" id="carregar-mais" type="button">
+            Carregar mais projetos <span data-icone="baixo"></span>
+          </button>
+        </div>
+      </section>
+      <section class="project-cta">
+        <div class="container">
+          <div>
+            <h2>O próximo projeto pode ser <span class="editorial accent">o seu.</span></h2>
+            <p>Da ideia à execução, criamos consigo.</p>
+          </div>
+          <a class="button" href="index.html#contactos"
+            >Falar com a equipa <span data-icone="diagonal"></span
+          ></a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <a class="brand" href="index.html" aria-label="FreeBeats — início"
+              ><img
+                class="brand-image"
+                src="assets/images/freebeats-logo-transparente.png"
+                alt="FreeBeats — Produção Cultural"
+                width="1536"
+                height="1024"
+                decoding="async"
+            /></a>
+            <p class="footer-about">
+              FreeBeats — Produção Cultural. Projetos, eventos e experiências artísticas em
+              Portugal.
+            </p>
+            <div class="social-links" data-redes></div>
+          </div>
+          <div>
+            <p class="footer-heading">Explore</p>
+            <ul class="footer-links">
+              <li><a href="index.html#sobre">Sobre a FreeBeats</a></li>
+              <li><a href="index.html#servicos">O que fazemos</a></li>
+              <li><a href="projetos.html">Os nossos projetos</a></li>
+              <li><a href="index.html#blog">Notas e bastidores</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="footer-heading">Diga-nos olá</p>
+            <ul class="footer-links">
+              <li>
+                <a href="mailto:silvapedrojl@gmail.com" data-empresa="email"
+                  >silvapedrojl@gmail.com</a
+                >
+              </li>
+              <li><a href="tel:+351916310970" data-empresa="telefone">+351 916 310 970</a></li>
+              <li data-empresa="localidade">Guimarães, Portugal</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span data-ano>2026</span> FreeBeats. Todos os direitos reservados.</span
+          ><span>Cultura feita de pessoas, para pessoas.</span>
+        </div>
+      </div>
+    </footer>
+    <a class="circle-button back-top" href="#topo" aria-label="Voltar ao topo" hidden
+      ><span data-icone="cima"></span
+    ></a>
+  </body>
+</html>

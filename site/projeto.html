@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#faf8f2" />
+    <title>Projeto — FreeBeats Produção Cultural</title>
+    <meta
+      name="description"
+      content="Conheça os projetos culturais da FreeBeats, o trabalho desenvolvido e os momentos de cada experiência."
+    />
+    <meta property="og:title" content="Projeto — FreeBeats Produção Cultural" />
+    <meta
+      property="og:description"
+      content="Conheça os projetos culturais da FreeBeats, o trabalho desenvolvido e os momentos de cada experiência."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_PT" />
+    <meta property="og:site_name" content="FreeBeats" />
+    <link rel="icon" href="assets/images/freebeats-logo-transparente.png" type="image/png" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <script src="js/conteudo.js" defer></script>
+    <script src="js/comum.js" defer></script>
+    <script src="js/projeto.js" defer></script>
+  </head>
+  <body id="topo">
+    <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
+    <header class="site-header" data-menu-open="false">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="FreeBeats — página inicial"
+          ><img
+            class="brand-image"
+            src="assets/images/freebeats-logo-transparente.png"
+            alt="FreeBeats — Produção Cultural"
+            width="1536"
+            height="1024"
+            decoding="async"
+        /></a>
+        <nav class="main-nav" id="menu-principal" aria-label="Menu principal">
+          <a href="index.html#inicio">Início</a><a href="index.html#sobre">Sobre</a
+          ><a href="index.html#servicos">Serviços</a
+          ><a href="projetos.html" aria-current="page">Projetos</a><a href="index.html#blog">Blog</a
+          ><a href="index.html#contactos">Contactos</a>
+        </nav>
+        <a class="button button-small header-cta" href="index.html#contactos"
+          >Vamos conversar <span data-icone="diagonal"></span
+        ></a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-controls="menu-principal"
+          aria-expanded="false"
+          aria-label="Abrir menu"
+        >
+          <span class="menu-icon" data-icone="menu"></span
+          ><span class="close-icon" data-icone="fechar"></span>
+        </button>
+      </div>
+    </header>
+    <noscript
+      ><p class="no-script">
+        Ative o JavaScript para consultar os projetos e usar as funcionalidades do site. Pode
+        contactar-nos diretamente por email ou telefone no rodapé.
+      </p></noscript
+    >
+    <main id="conteudo">
+      <div class="container detail-head">
+        <p class="eyebrow accent">Portefólio</p>
+        <h1 class="page-title">A abrir o <span class="editorial accent">projeto.</span></h1>
+      </div>
+    </main>
+    <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-titulo">
+      <div class="lightbox-toolbar">
+        <p id="lightbox-titulo">Galeria do projeto</p>
+        <button
+          class="circle-button"
+          id="fechar-galeria"
+          type="button"
+          aria-label="Fechar imagem ampliada"
+        >
+          <span data-icone="fechar"></span>
+        </button>
+      </div>
+      <img class="lightbox-image" id="lightbox-imagem" alt="" />
+      <div class="lightbox-controls">
+        <button
+          class="circle-button"
+          id="lightbox-anterior"
+          type="button"
+          aria-label="Imagem anterior"
+        >
+          <span data-icone="anterior"></span></button
+        ><span id="lightbox-contador" aria-live="polite"></span
+        ><button
+          class="circle-button"
+          id="lightbox-seguinte"
+          type="button"
+          aria-label="Imagem seguinte"
+        >
+          <span data-icone="seguinte"></span>
+        </button>
+      </div>
+    </dialog>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <a class="brand" href="index.html" aria-label="FreeBeats — início"
+              ><img
+                class="brand-image"
+                src="assets/images/freebeats-logo-transparente.png"
+                alt="FreeBeats — Produção Cultural"
+                width="1536"
+                height="1024"
+                decoding="async"
+            /></a>
+            <p class="footer-about">
+              FreeBeats — Produção Cultural. Projetos, eventos e experiências artísticas em
+              Portugal.
+            </p>
+            <div class="social-links" data-redes></div>
+          </div>
+          <div>
+            <p class="footer-heading">Explore</p>
+            <ul class="footer-links">
+              <li><a href="index.html#sobre">Sobre a FreeBeats</a></li>
+              <li><a href="index.html#servicos">O que fazemos</a></li>
+              <li><a href="projetos.html">Os nossos projetos</a></li>
+              <li><a href="index.html#blog">Notas e bastidores</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="footer-heading">Diga-nos olá</p>
+            <ul class="footer-links">
+              <li>
+                <a href="mailto:silvapedrojl@gmail.com" data-empresa="email"
+                  >silvapedrojl@gmail.com</a
+                >
+              </li>
+              <li><a href="tel:+351916310970" data-empresa="telefone">+351 916 310 970</a></li>
+              <li data-empresa="localidade">Guimarães, Portugal</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span data-ano>2026</span> FreeBeats. Todos os direitos reservados.</span
+          ><span>Cultura feita de pessoas, para pessoas.</span>
+        </div>
+      </div>
+    </footer>
+    <a class="circle-button back-top" href="#topo" aria-label="Voltar ao topo" hidden
+      ><span data-icone="cima"></span
+    ></a>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "freebeats-site",
+  "version": "2.2.0",
+  "private": true,
+  "description": "Site estático FreeBeats — HTML, CSS e JavaScript, sem dependências.",
+  "scripts": {
+    "dev": "node ferramentas/servidor.cjs",
+    "start": "node ferramentas/servidor.cjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
